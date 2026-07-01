@@ -3,144 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SeniorKart</title>
+  <title>SeniorKart - Everything Seniors Need</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="top-strip">
+    <span>Trusted senior care essentials</span>
+    <span>Free delivery above ₹999</span>
+    <span>Customer Care: +91 89043 28298</span>
+  </div>
+
   <header class="header">
-    <div class="brand">
-      <span class="brand-icon">SK</span>
-      <div>
-        <h1>SeniorKart</h1>
-        <p>Everything seniors need, delivered with care</p>
-      </div>
-    </div>
-    <nav>
-      <a href="#categories">Categories</a>
-      <a href="#products">Products</a>
-      <a href="#cart">Cart</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="brand"><img src="logo.png" alt="SeniorKart Logo" /></div>
+    <div class="search-box"><input type="text" placeholder="Search products, categories or care boxes..." /><button>Search</button></div>
+    <div class="header-actions"><a href="#careboxes">Care Boxes</a><a href="#cart">Cart <span id="cartCount">0</span></a></div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <p class="label">Trusted care at your doorstep</p>
-      <h2>Daily essentials, health support, and comfort products for senior citizens.</h2>
-      <p class="hero-text">
-        SeniorKart helps families order groceries, personal care items, mobility aids,
-        health support products, and monthly care packs easily.
-      </p>
-      <div class="hero-buttons">
-        <a href="#products" class="btn primary">Shop Now</a>
-        <a href="https://wa.me/918904328298?text=Hello%2C%20I%20want%20to%20order%20from%20SeniorKart" class="btn secondary">Order on WhatsApp</a>
-      </div>
-    </div>
-  </section>
+  <nav class="nav">
+    <a href="#home">Home</a><a href="#categories">Categories</a><a href="#careboxes">Care Boxes</a><a href="#buildbox">Build Your Box</a><a href="#products">Products</a><a href="#contact">Contact</a>
+  </nav>
 
-  <section class="trust">
-    <div><strong>Easy Ordering</strong><span>Simple design for seniors</span></div>
-    <div><strong>Doorstep Delivery</strong><span>Safe and reliable delivery</span></div>
-    <div><strong>Monthly Packs</strong><span>Customized senior care support</span></div>
-    <div><strong>Phone Support</strong><span>Call or WhatsApp anytime</span></div>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Care that reaches your loved ones</p>
+      <h1>Everything Seniors Need. Carefully Packed. Delivered with Care.</h1>
+      <p>SeniorKart helps families order daily essentials, groceries, health products, mobility support items and monthly care boxes for senior citizens.</p>
+      <div class="hero-buttons">
+        <a href="#careboxes" class="btn primary">Shop Care Boxes</a>
+        <a href="https://wa.me/918904328298?text=Hello%20SeniorKart%2C%20I%20want%20to%20place%20an%20order" class="btn secondary">Order on WhatsApp</a>
+      </div>
+      <div class="hero-icons"><div>Genuine Products</div><div>Carefully Packed</div><div>Delivered with Love</div></div>
+    </div>
+    <div class="hero-card"><div class="box-visual"><h3>SeniorKart Care Box</h3><p>Curated essentials packed together in one trusted box.</p><ul><li>Health support items</li><li>Groceries and nutrition</li><li>Personal care products</li><li>Comfort and safety items</li></ul></div></div>
   </section>
 
   <section id="categories" class="section">
     <h2>Shop by Category</h2>
-    <div class="category-grid">
-      <div class="category">Health Devices</div>
-      <div class="category">Medicines Support</div>
-      <div class="category">Groceries</div>
-      <div class="category">Personal Care</div>
-      <div class="category">Mobility Aids</div>
-      <div class="category">Comfort Items</div>
+    <div class="category-grid"><div class="category">Health Monitoring</div><div class="category">Medicines & Wellness</div><div class="category">Nutrition</div><div class="category">Groceries</div><div class="category">Personal Care</div><div class="category">Mobility Aids</div><div class="category">Comfort & Safety</div><div class="category">Care Boxes</div></div>
+  </section>
+
+  <section id="careboxes" class="section care-section">
+    <div class="section-head"><h2>Most Loved Care Boxes</h2><p>Choose a ready-made care box or build your own for your loved ones.</p></div>
+    <div class="product-grid">
+      <div class="product-card"><div class="product-img">Essential</div><h3>Essential Care Box</h3><p>Daily essentials for a healthy everyday life.</p><strong>₹1,999 / month</strong><button onclick="addToCart('Essential Care Box', 1999)">Add to Cart</button></div>
+      <div class="product-card"><div class="product-img">Diabetes</div><h3>Diabetes Care Box</h3><p>Useful essentials for diabetes management.</p><strong>₹2,499 / month</strong><button onclick="addToCart('Diabetes Care Box', 2499)">Add to Cart</button></div>
+      <div class="product-card"><div class="product-img">Heart</div><h3>Heart Care Box</h3><p>Helpful products for heart health and lifestyle.</p><strong>₹2,799 / month</strong><button onclick="addToCart('Heart Care Box', 2799)">Add to Cart</button></div>
+      <div class="product-card"><div class="product-img">Comfort</div><h3>Comfort Care Box</h3><p>Comfort, relaxation and better daily living.</p><strong>₹2,399 / month</strong><button onclick="addToCart('Comfort Care Box', 2399)">Add to Cart</button></div>
     </div>
+  </section>
+
+  <section id="buildbox" class="build-box">
+    <div><h2>Build Your Own Care Box</h2><p>Choose the products your parent or grandparent needs. SeniorKart will source, quality-check and pack everything together in a branded SeniorKart box.</p><a href="#products" class="btn primary">Start Building</a></div>
+    <div class="steps"><div><strong>1</strong><span>Choose Products</span></div><div><strong>2</strong><span>We Pack with Care</span></div><div><strong>3</strong><span>Delivered to You</span></div></div>
   </section>
 
   <section id="products" class="section">
-    <h2>Popular Essentials</h2>
-    <div class="products">
-      <div class="product">
-        <div class="product-img">BP</div>
-        <h3>Blood Pressure Monitor</h3>
-        <p>Digital BP machine for daily health checks.</p>
-        <span>₹1,499</span>
-        <button onclick="addToCart('Blood Pressure Monitor', 1499)">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <div class="product-img">GP</div>
-        <h3>Monthly Grocery Pack</h3>
-        <p>Rice, dal, atta, oil, tea, biscuits, and basics.</p>
-        <span>₹2,499</span>
-        <button onclick="addToCart('Monthly Grocery Pack', 2499)">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <div class="product-img">AD</div>
-        <h3>Adult Diaper Pack</h3>
-        <p>Comfortable hygiene support for daily use.</p>
-        <span>₹899</span>
-        <button onclick="addToCart('Adult Diaper Pack', 899)">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <div class="product-img">WS</div>
-        <h3>Walking Stick</h3>
-        <p>Lightweight walking support with strong grip.</p>
-        <span>₹699</span>
-        <button onclick="addToCart('Walking Stick', 699)">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <div class="product-img">AS</div>
-        <h3>Anti-Slip Bathroom Mat</h3>
-        <p>Safety mat to reduce bathroom slipping risk.</p>
-        <span>₹499</span>
-        <button onclick="addToCart('Anti-Slip Bathroom Mat', 499)">Add to Cart</button>
-      </div>
-
-      <div class="product">
-        <div class="product-img">CK</div>
-        <h3>Senior Comfort Care Kit</h3>
-        <p>Hot water bag, blanket, wipes, soap, and night lamp.</p>
-        <span>₹1,799</span>
-        <button onclick="addToCart('Senior Comfort Care Kit', 1799)">Add to Cart</button>
-      </div>
+    <h2>Popular Products</h2>
+    <div class="product-grid">
+      <div class="product-card"><div class="product-img">BP</div><h3>Blood Pressure Monitor</h3><p>Digital BP machine for daily checks.</p><strong>₹1,499</strong><button onclick="addToCart('Blood Pressure Monitor', 1499)">Add to Cart</button></div>
+      <div class="product-card"><div class="product-img">AD</div><h3>Adult Diaper Pack</h3><p>Comfortable hygiene support.</p><strong>₹899</strong><button onclick="addToCart('Adult Diaper Pack', 899)">Add to Cart</button></div>
+      <div class="product-card"><div class="product-img">WS</div><h3>Walking Stick</h3><p>Strong and lightweight support.</p><strong>₹699</strong><button onclick="addToCart('Walking Stick', 699)">Add to Cart</button></div>
+      <div class="product-card"><div class="product-img">MAT</div><h3>Anti-Slip Bathroom Mat</h3><p>Safety support for bathroom use.</p><strong>₹499</strong><button onclick="addToCart('Anti-Slip Bathroom Mat', 499)">Add to Cart</button></div>
     </div>
   </section>
 
-  <section id="cart" class="section cart-section">
-    <h2>Your Cart</h2>
-    <div class="cart-box">
-      <ul id="cartItems"></ul>
-      <h3>Total: ₹<span id="cartTotal">0</span></h3>
-      <button onclick="sendWhatsAppOrder()" class="checkout-btn">Send Order on WhatsApp</button>
-    </div>
+  <section class="trust"><div>100% Genuine Products</div><div>Expertly Curated</div><div>Secure Payments Soon</div><div>Dedicated Customer Support</div></section>
+
+  <section id="cart" class="section cart-section"><h2>Your Cart</h2><div class="cart-box"><ul id="cartItems"></ul><h3>Total: ₹<span id="cartTotal">0</span></h3><button onclick="sendWhatsAppOrder()">Send Order on WhatsApp</button></div></section>
+
+  <section id="contact" class="contact">
+    <div><h2>Contact SeniorKart</h2><p><strong>Phone / WhatsApp:</strong> +91 89043 28298</p><p><strong>Email:</strong> Pooja.raghavendra@gmail.com</p><p><strong>Service:</strong> Senior care essentials and care boxes</p></div>
+    <form id="callbackForm"><h3>Request a Callback</h3><input id="customerName" type="text" placeholder="Your Name" required /><input id="customerPhone" type="tel" placeholder="Phone Number" required /><textarea id="customerNeed" placeholder="What do you need?"></textarea><button type="submit">Submit Request</button><p id="formStatus"></p></form>
   </section>
 
-  <section class="section checkout">
-    <h2>Request a Callback</h2>
-    <form id="callbackForm">
-      <input type="text" id="customerName" placeholder="Your Name" required />
-      <input type="tel" id="customerPhone" placeholder="Phone Number" required />
-      <textarea id="customerNeed" placeholder="What do you need?"></textarea>
-      <button type="submit">Submit Request</button>
-      <p id="formStatus"></p>
-    </form>
-  </section>
-
-  <section id="contact" class="section contact">
-    <h2>Contact SeniorKart</h2>
-    <p><strong>Phone:</strong> +91 89043 28298</p>
-    <p><strong>WhatsApp:</strong> +91 89043 28298</p>
-    <p><strong>Email:</strong> Pooja.raghavendra@gmail.com</p>
-  </section>
-
-  <footer>
-    <p>© 2026 SeniorKart. Built for safe and simple senior care shopping.</p>
-  </footer>
-
+  <footer><p>© 2026 SeniorKart. Everything Seniors Need, Delivered with Care.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
